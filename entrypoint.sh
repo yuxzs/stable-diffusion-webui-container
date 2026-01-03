@@ -6,8 +6,8 @@ INSTALL_DIR="/home/sduser/stable-diffusion-webui"
 
 echo "Checking if Stable Diffusion WebUI exists..."
 
-if [ ! -d "$INSTALL_DIR/webui.sh" ]; then
-    echo "WebUI not found. Cloning from git..."
+if [ ! -f "$INSTALL_DIR/webui.sh" ]; then
+    echo "WebUI not found. Cloning from git..." "$INSTALL_DIR"
     git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 else
     echo "WebUI found. Skipping clone."
