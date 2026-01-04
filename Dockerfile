@@ -1,5 +1,5 @@
 # FROM python:3.11-slim
-FROM nvidia/cuda:12.2-base
+FROM nvidia/cuda:12.2.2-cudnn8-runtime-ubuntu22.04
 
 # ENV DEBIAN_FRONTEND=noninteractive \
 #     PYTHONUNBUFFERED=1 \
