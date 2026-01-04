@@ -30,4 +30,4 @@ git config --global --add safe.directory /home/sduser/stable-diffusion-webui
 # --xformers: 加速推論 (建議加上，雖然 webui.sh 會試著裝)
 # --data-dir: 指定資料儲存位置 (可選)
 exec ./webui.sh --listen --api --port 7860
-# python launch.py --xformers --opt-sdp-attention --no-half-vae
+# python launch.py -f --xformers --opt-sdp-attention --no-half-vae
