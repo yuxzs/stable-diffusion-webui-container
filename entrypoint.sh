@@ -20,6 +20,8 @@ cd "$INSTALL_DIR"
 # 確保 venv 存在並啟動 (webui.sh 會自動處理，但我們可以在這裡微調)
 echo "Launching WebUI..."
 
+git config --global --add safe.directory /home/sduser/stable-diffusion-webui
+
 # 啟動參數說明：
 # --listen: 允許外部連線
 # --api: 開啟 API
