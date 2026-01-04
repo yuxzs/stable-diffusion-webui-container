@@ -16,15 +16,12 @@ RUN apt-get update && apt-get install -y \
 RUN pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
 
 # 3. 複製啟動腳本進去
-COPY entrypoint.sh /home/sduser/entrypoint.sh
-RUN chmod +x /home/sduser/entrypoint.sh && \
-    chown sduser:sduser /home/sduser/entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh 
 
-# 4. 切換使用者
-USER sduser
-WORKDIR /home/sduser
+WORKDIR /
 
 EXPOSE 7860
 
 # 設定入口點
-ENTRYPOINT ["/home/sduser/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
