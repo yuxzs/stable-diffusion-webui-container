@@ -7,8 +7,8 @@ INSTALL_DIR="/home/sduser/stable-diffusion-webui"
 echo "Checking if Stable Diffusion WebUI exists..."
 
 if [ ! -f "$INSTALL_DIR/webui.sh" ]; then
-    echo "WebUI not found. Cloning from git..." "$INSTALL_DIR"
-    git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+    echo "WebUI not found. Cloning from git..."
+    git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git "$INSTALL_DIR"
 else
     echo "WebUI found. Skipping clone."
     # 選擇性：每次啟動時自動更新 (如果不需要可註解掉)
