@@ -9,7 +9,9 @@ FROM nvidia/cuda:12.2-base
 # ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
-    python3.10 pip
+    python3.10 python3.10-venv pip \
+    wget git \
+    libgl1 libglib2.0-0
 
 RUN pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
 
