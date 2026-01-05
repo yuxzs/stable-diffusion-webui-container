@@ -11,7 +11,7 @@ FROM nvidia/cuda:12.2.2-cudnn8-runtime-ubuntu22.04
 RUN apt-get update && apt-get install -y \
     python3.10 python3.10-venv pip \
     wget git \
-    libgl1 libglib2.0-0
+    libgl1 libglib2.0-0 libgoogle-perftools4
 
 RUN pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
 
